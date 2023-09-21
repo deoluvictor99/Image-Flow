@@ -108,7 +108,7 @@ useEffect(() => {
             </header>
 
             <div className=' pb-8 '>
-              <div className = 'flex flex-wrap gap-2 justify-center touch-manipulation ' >
+              <div className = 'flex flex-wrap gap-2 justify-center' >
                 <DndContext collisionDetection={closestCenter} onDragEnd={onDragEnd}>
                   <SortableContext items={users} strategy={rectSortingStrategy}>
                     { searchResults && searchResults.length > 0 ? (searchResults.map((user) => (
