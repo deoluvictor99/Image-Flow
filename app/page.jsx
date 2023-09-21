@@ -108,12 +108,12 @@ useEffect(() => {
             </header>
 
             <div className=' pb-8 '>
-              <div className = 'flex flex-wrap gap-2 justify-center touch-none ' >
+              <div className = 'flex flex-wrap gap-2 justify-center ' >
                 <DndContext collisionDetection={closestCenter} onDragEnd={onDragEnd}>
                   <SortableContext items={users} strategy={rectSortingStrategy}>
                     { searchResults && searchResults.length > 0 ? (searchResults.map((user) => (
                         <div 
-                          className=" transition duration-500 ease-in-out touch-none rounded-lg relative overflow-hidden "
+                          className=" transition duration-500 ease-in-out rounded-lg relative overflow-hidden "
                           >
                             <Image
                               src={user.url}
