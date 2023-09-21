@@ -64,29 +64,26 @@ useEffect(() => {
 
     return(
         <>
+          <div 
+            ref={setNodeRef} 
+            style={style} 
+            {...attributes} 
+            {...listeners} 
+            className="transition duration-500 ease-in-out touch-none rounded-lg relative overflow-hidden "
+            >
+            
+              <Image
+                src={user.url}
+                alt={user.title}
+                width={300}
+                height={300}
+                className=" hover:scale-110 transition-all"
+              />
               
-
-                <div 
-                  ref={setNodeRef} 
-                  style={style} 
-                  {...attributes} 
-                  {...listeners} 
-                  className="transition duration-500 ease-in-out touch-none rounded-lg relative overflow-hidden "
-                  >
-                  
-
-                      <Image
-                        src={user.url}
-                        alt={user.title}
-                        width={300}
-                        height={300}
-                        className=" hover:scale-110 transition-all"
-                      />
-                    
-                    <div className="absolute bottom-0 left-0 bg-gray-500/50 px-4 py-2 backdrop-blur-sm text-white text-lg w-full ">
-                      <h1>{user.title || <Skeleton count={5}/>}</h1>
-                    </div>
-                  </div>
+              <div className="absolute bottom-0 left-0 bg-gray-500/50 px-4 py-2 backdrop-blur-sm text-white text-lg w-full ">
+                <h1>{user.title || <Skeleton count={5}/>}</h1>
+              </div>
+            </div>
 
         </>
     )
@@ -111,7 +108,7 @@ useEffect(() => {
             </header>
 
             <div className=' pb-8 '>
-              <div className = 'flex flex-wrap gap-2 justify-center ' >
+              <div className = 'flex flex-wrap gap-2 justify-center touch-none ' >
                 <DndContext collisionDetection={closestCenter} onDragEnd={onDragEnd}>
                   <SortableContext items={users} strategy={rectSortingStrategy}>
                     { searchResults && searchResults.length > 0 ? (searchResults.map((user) => (
