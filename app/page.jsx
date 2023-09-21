@@ -69,7 +69,7 @@ useEffect(() => {
             style={style} 
             {...attributes} 
             {...listeners} 
-            className="transition duration-500 ease-in-out touch-manipulation rounded-lg relative overflow-hidden "
+            className="transition duration-500 ease-in-out touch-none rounded-lg relative overflow-hidden "
             >
             
               <Image
@@ -113,7 +113,7 @@ useEffect(() => {
                   <SortableContext items={users} strategy={rectSortingStrategy}>
                     { searchResults && searchResults.length > 0 ? (searchResults.map((user) => (
                         <div 
-                          className=" transition duration-500 ease-in-out rounded-lg relative overflow-hidden touch-manipulation "
+                          className=" transition duration-500 ease-in-out rounded-lg relative overflow-hidden touch-none "
                           >
                             <Image
                               src={user.url}
