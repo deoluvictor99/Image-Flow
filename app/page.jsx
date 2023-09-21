@@ -69,7 +69,7 @@ useEffect(() => {
             style={style} 
             {...attributes} 
             {...listeners} 
-            className="transition duration-500 ease-in-out touch-none rounded-lg relative overflow-hidden "
+            className="transition duration-500 ease-in-out touch-manipulation rounded-lg relative overflow-hidden "
             >
             
               <Image
@@ -108,12 +108,12 @@ useEffect(() => {
             </header>
 
             <div className=' pb-8 '>
-              <div className = 'flex flex-wrap gap-2 justify-center ' >
+              <div className = 'flex flex-wrap gap-2 justify-center touch-manipulation ' >
                 <DndContext collisionDetection={closestCenter} onDragEnd={onDragEnd}>
                   <SortableContext items={users} strategy={rectSortingStrategy}>
                     { searchResults && searchResults.length > 0 ? (searchResults.map((user) => (
                         <div 
-                          className=" transition duration-500 ease-in-out rounded-lg relative overflow-hidden "
+                          className=" transition duration-500 ease-in-out rounded-lg relative overflow-hidden touch-manipulation "
                           >
                             <Image
                               src={user.url}
